@@ -1,0 +1,215 @@
+.about {
+  margin-top: 15rem;
+
+  @include responsive(tab-port) {
+    margin-top: 10rem;
+  }
+
+  &__header-container {
+    margin-top: 4rem;
+    display: flex;
+
+    @include responsive(tab-port) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+
+  &__h3 {
+    font-size: 6rem;
+    font-family: $bold-text;
+    color: $color-white;
+    flex: 0 0 50%;
+  }
+
+  &__paragraph {
+    font-size: 3rem;
+    font-family: $text-helv-400;
+    color: $color-white;
+    flex: 0 0 50%;
+
+    &:last-child {
+      margin-top: 2rem;
+    }
+
+    @include responsive(mobile) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__description-container--margin {
+    margin-top: 10rem;
+  }
+
+  &__description-container:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__description-container {
+    padding: 3rem;
+    padding-bottom: 6rem;
+    background-color: $color-white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    border-radius: 2rem;
+  }
+
+  &__left-side {
+    position: relative;
+  }
+
+  &__h4 {
+    position: relative;
+    max-width: 48rem;
+    line-height: 5.6rem;
+    font-size: 4rem;
+    font-family: $bold-text;
+    color: $bk-color;
+    z-index: 3;
+
+    @include responsive(mobile) {
+      font-size: 4.7rem;
+    }
+
+    &--first {
+      @include responsive(mobile) {
+        max-width: 33rem;
+      }
+    }
+
+    &--second {
+      @include responsive(mobile) {
+        max-width: 100%;
+      }
+    }
+
+    &--third {
+      @include responsive(mobile) {
+        max-width: 100%;
+        line-height: 6rem;
+      }
+    }
+  }
+
+  &__fig {
+    &--1 {
+      position: absolute;
+      top: 1.3rem;
+      left: 17rem;
+      z-index: 1;
+      width: 18.9rem;
+      height: 18.9rem;
+
+      @include responsive(mobile) {
+        top: 1.1rem;
+        left: 24rem;
+        width: 17.1rem;
+        height: 17.1rem;
+      }
+    }
+
+    &--2 {
+      position: absolute;
+      top: -1rem;
+      left: 35rem;
+      z-index: 1;
+      width: 14rem;
+      height: 9.1rem;
+
+      @include responsive(mobile) {
+        top: 15.1rem;
+        left: 30rem;
+        width: 17.1rem;
+        height: 11.1rem;
+      }
+    }
+
+    &--3 {
+      position: absolute;
+      top: -1rem;
+      left: 30.5rem;
+      z-index: 1;
+      width: 18.9rem;
+      height: 18.9rem;
+
+      @include responsive(mobile) {
+        top: 1rem;
+        left: 24.5rem;
+        width: 17.1rem;
+        height: 17.1rem;
+      }
+    }
+
+    &--4 {
+      position: absolute;
+      top: 8rem;
+      right: 11rem;
+      z-index: 1;
+      width: 18rem;
+      height: 5.9rem;
+
+      @include responsive(tab-port) {
+        width: 14rem;
+        height: 3.9rem;
+        right: 4rem;
+      }
+
+      @include responsive(mobile) {
+        top: 16rem;
+        right: 6rem;
+        width: 21.7rem;
+        height: 7.1rem;
+      }
+    }
+
+    &--5 {
+      position: absolute;
+      top: 0;
+      left: 11rem;
+      z-index: 1;
+      width: 16rem;
+      height: 16rem;
+
+      @include responsive(mobile) {
+        top: 0;
+        left: 60%;
+      }
+    }
+
+    &--6 {
+      position: absolute;
+      top: 4rem;
+      right: 10rem;
+      z-index: 1;
+      width: 17rem;
+      height: 5.2rem;
+
+      @include responsive(tab-land) {
+        width: 10rem;
+        height: 3.2rem;
+        right: 2rem;
+        top: 2rem;
+      }
+    }
+  }
+
+  &__right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 1.8rem;
+    font-style: $text-helv-400;
+
+    @include responsive(mobile) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__description-paragraph {
+    max-width: 51.9rem;
+
+    @include responsive(mobile) {
+      max-width: 39rem;
+    }
+  }
+}

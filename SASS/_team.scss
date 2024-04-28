@@ -1,0 +1,133 @@
+.team {
+  margin-top: 20rem;
+
+  @include responsive(tab-port) {
+    margin-top: 10rem;
+  }
+
+  &__description {
+    margin-top: 5rem;
+    padding: 4rem;
+    background-color: $color-orange-light;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+
+    @include responsive(mobile) {
+      padding-bottom: 20rem;
+    }
+  }
+
+  &__h4 {
+    font-size: 4rem;
+    font-family: $bold-text;
+    line-height: 4.4rem;
+    max-width: 50.2rem;
+
+    @include responsive(mobile) {
+      font-size: 4.6rem;
+      max-width: 43.6rem;
+    }
+  }
+
+  &__right-side {
+    position: relative;
+  }
+
+  &__paragraph {
+    font-size: 1.8rem;
+    font-family: $text-helv-400;
+    max-width: 40rem;
+
+    @include responsive(mobile) {
+      font-size: 2.57rem;
+      max-width: 43.6rem;
+      margin: 3rem 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    width: 41.8rem;
+    height: 15.6rem;
+    top: 4rem;
+    right: 0;
+
+    @include responsive(tab-land) {
+      width: 31.8rem;
+      height: 10.6rem;
+      top: 8rem;
+    }
+
+    @include responsive(mobile) {
+      top: 21rem;
+      right: 8rem;
+      width: 33.6rem;
+      height: 16.4rem;
+    }
+  }
+
+  //Team section
+
+  &__container {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include responsive(mobile) {
+      display: none;
+    }
+  }
+
+  &__profile {
+    flex: 0 0 18.8%;
+  }
+
+  &__name-container {
+    border-radius: 2rem 2rem 0 0;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    font-family: $text-helv-400;
+    text-transform: uppercase;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+
+    @include responsive(tab-port) {
+      font-size: 1.4rem;
+    }
+
+    @include responsive(mobile) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__role {
+    font-size: 1.2rem;
+
+    @include responsive(mobile) {
+      font-size: 2rem;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    border-radius: 0 0 2rem 2rem;
+    object-fit: cover;
+  }
+}
+
+.carousel-mobile {
+  margin-top: 4rem;
+  display: none;
+
+  @include responsive(tab-port) {
+    display: block;
+  }
+}

@@ -1,0 +1,123 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
+  gap: 2rem;
+
+  @include responsive(mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  &__section-title {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__paragraph {
+    color: $color-white;
+    font-size: 3rem;
+    font-family: $text-helv-400;
+  }
+
+  &__img {
+    display: block;
+    width: 18.5rem;
+    height: 18.5rem;
+    align-self: flex-start;
+
+    @include responsive(mobile) {
+      width: 9.5rem;
+      height: 9.8rem;
+    }
+
+    @include responsive(mobile) {
+      width: 11.4rem;
+      height: 11.4rem;
+    }
+  }
+
+  &__cell {
+    border-radius: 2rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    cursor: pointer;
+
+    &--light {
+      background-color: $color-orange-light;
+
+      &:hover {
+        background-color: $color-orange-dark;
+      }
+    }
+
+    &--dark {
+      background-color: $color-red-light;
+
+      &:hover {
+        background-color: $color-red-dark;
+      }
+    }
+  }
+
+  &__h3 {
+    font-size: 5.4rem;
+    font-family: $bold-text;
+    align-self: flex-end;
+
+    @include responsive(mobile) {
+      font-size: 4.2rem;
+    }
+  }
+
+  //Services ad
+
+  &__ad {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 3rem;
+
+    @include responsive(mobile) {
+      flex-direction: column;
+    }
+
+    &-line-container {
+      overflow: hidden;
+      flex: 0 0 70%;
+      border: 1px solid $color-red-light;
+      border-radius: 1.5rem;
+      padding: 0.2rem 0;
+
+      display: flex;
+      align-items: center;
+
+      @include responsive(mobile) {
+        display: none;
+      }
+    }
+
+    &-line {
+      color: $color-red-light;
+      font-size: 3.2rem;
+      width: 100%;
+      white-space: nowrap;
+      text-transform: uppercase;
+      animation: runningLine 20s linear infinite;
+    }
+  }
+
+  &__btn {
+    flex: 1;
+  }
+
+  @keyframes runningLine {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+}

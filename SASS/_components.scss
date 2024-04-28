@@ -1,0 +1,82 @@
+.btn {
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  color: $bk-color;
+  background-color: $color-red-light;
+  font-size: 1.8rem;
+  padding: 2rem 4rem;
+  border-radius: 2rem;
+  font-family: $text-helv-700;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  &:hover {
+    background-color: $color-red-dark;
+  }
+}
+
+.chapter-box {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  &__number {
+    padding: 1.2rem 2rem;
+    background-color: $color-white;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-family: $bold-text;
+  }
+
+  &__h2 {
+    color: $color-white;
+    font-size: 2.2rem;
+    font-family: $text-helv-400;
+    text-transform: uppercase;
+  }
+}
+
+//Running line component
+
+// .running-line {
+//     max-width:100%;
+//     display: flex;
+//     align-items: center;
+//     gap:3rem;
+
+//     &__container {
+//         overflow: hidden;
+//         flex:0 0 70%;
+//         border: 1px solid $color-red-light;
+//         border-radius: 1.5rem;
+//         padding:.2rem 0;
+//     }
+
+//     &__line {
+//         color:$color-red-light;
+//         font-size: 3.2rem;
+//         width:100%;
+//         white-space:nowrap;
+//         text-transform: uppercase;
+//         animation: runningLine 20s linear infinite;
+//     }
+
+//     &__btn {
+//         flex:1;
+//     }
+// }
+
+// @keyframes runningLine {
+//     0% {
+//         transform:translateX(100%);
+//     }
+
+//     100% {
+//         transform:translateX(-200%);
+//     }
+// }

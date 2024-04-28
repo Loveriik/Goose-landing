@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Helvetica Now Display 400";
+  src: url(../fonts/HelveticaNowDisplay-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Neue Metana Next Free Personal";
+  src: url(../fonts/NeueMetanaNext-SemiBold.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica Now Display 700";
+  src: url(../fonts/HelveticaNowDisplay-ExtraBold.woff) format("truetype");
+}
+
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == tab-land) {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == tab-port) {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == med) {
+    @media screen and (max-width: 800px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == mobile) {
+    @media screen and (max-width: 440px) {
+      @content;
+    }
+  }
+}
+
+$color-white: #ffffff;
+$color-orange-light: #f8bc5c;
+$color-orange-dark: #feb135;
+$color-red-light: #ff6a3a;
+$color-red-dark: #ff5822;
+$color-grey: #989ea4;
+
+$bk-color: #151515;
+$bk-color-2: #202124;
+
+$text-helv-400: "Helvetica Now Display 400";
+$text-helv-700: "Helvetica Now Display 700";
+$bold-text: "Neue Metana Next Free Personal";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @include responsive(tab-land) {
+    font-size: 50%;
+  }
+
+  @include responsive(tab-port) {
+    font-size: 42.5%;
+  }
+}
+
+body {
+  overflow-x: hidden;
+
+  background-color: $bk-color-2;
+  font-family: $text-helv-400;
+  display: grid;
+  grid-template-columns: minmax(4rem, 1fr) minmax(min-content, 144rem) minmax(
+      4rem,
+      1fr
+    );
+
+  & > * {
+    grid-column: 2;
+  }
+
+  @include responsive(mobile) {
+    grid-template-columns: 2.5rem 1fr 2.5rem;
+  }
+}
